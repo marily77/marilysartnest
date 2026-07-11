@@ -12,7 +12,7 @@ export default function Lightbox({ artwork, categoryMeta, onClose }) {
     };
   }, [onClose]);
 
-  if (!artwork) return null;
+  if (!artwork) return;
 
   return (
     <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">
