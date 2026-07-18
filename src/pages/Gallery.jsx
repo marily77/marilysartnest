@@ -9,7 +9,7 @@ import "./Gallery.css";
 export default function Gallery() {
   const [params, setParams] = useSearchParams();
   const active = params.get("theme") || "all";
-  const [open, setOpen] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
   const scopeRef = useReveal([active]);
 
   const byId = Object.fromEntries(categories.map((c) => [c.id, c]));
@@ -20,13 +20,20 @@ export default function Gallery() {
   );
 
   useEffect(() => {
-    window.scrollTo({ top: window.scrollY }); // no-op, keeps position on filter change
+    setOpenIndex(null);
   }, [active]);
 
   const setTheme = (id) => {
     if (id === "all") setParams({});
     else setParams({ theme: id });
   };
+
+  const openArtwork = filtered[openIndex] ?? null;
+
+  const goPrev = () =>
+    setOpenIndex((i) => (i === null ? null : (i - 1 + filtered.length) % filtered.length));
+  const goNext = () =>
+    setOpenIndex((i) => (i === null ? null : (i + 1) % filtered.length));
 
   return (
     <div className="container section" ref={scopeRef}>
@@ -61,20 +68,22 @@ export default function Gallery() {
       </div>
 
       <div className="grid grid--3" key={active}>
-        {filtered.map((art) => (
+        {filtered.map((art, i) => (
           <ArtworkCard
             key={art.id}
             artwork={art}
             categoryMeta={byId[art.category]}
-            onOpen={setOpen}
+            onOpen={() => setOpenIndex(i)}
           />
         ))}
       </div>
 
       <Lightbox
-        artwork={open}
-        categoryMeta={open ? byId[open.category] : null}
-        onClose={() => setOpen(null)}
+        artwork={openArtwork}
+        categoryMeta={openArtwork ? byId[openArtwork.category] : null}
+        onClose={() => setOpenIndex(null)}
+        onPrev={goPrev}
+        onNext={goNext}
       />
     </div>
   );
