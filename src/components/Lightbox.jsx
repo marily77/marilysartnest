@@ -3,6 +3,8 @@ import "./Lightbox.css";
 
 export default function Lightbox({ artwork, categoryMeta, onClose }) {
   useEffect(() => {
+    if (!artwork) return;
+
     const onKey = (e) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -10,9 +12,9 @@ export default function Lightbox({ artwork, categoryMeta, onClose }) {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [onClose]);
+  }, [artwork, onClose]);
 
-  if (!artwork) return;
+  if (!artwork) return null;
 
   return (
     <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">

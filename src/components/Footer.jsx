@@ -7,13 +7,13 @@ export default function Footer() {
       <div className="container footer__row">
         <span className="footer__brand">Marily's Art Nest</span>
         <div className="footer__socials">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://instagram.com/marilysartnest" target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+          <a href="https://facebook.com/marilysartnest" target="_blank" rel="noreferrer">
             Facebook
           </a>
-          <a href="mailto:hello@marilysartnest.com">Email</a>
+          <a href="mailto:marily77@gmail.com">Email</a>
         </div>
         <span className="footer__copy">© {year} Marily</span>
       </div>
