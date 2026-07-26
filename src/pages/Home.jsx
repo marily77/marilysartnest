@@ -16,7 +16,7 @@ export default function Home() {
         <div className="container hero__inner">
           <p className="eyebrow">Marily &middot; maalikunst</p>
           <h1 className="hero__title">
-            Värvikirev maailm, <em>vaikselt raamitud.</em>
+            Minu värviline, <em>maailm.</em>
           </h1>
           <p className="hero__lede">
             Igal teemal oma materjal, oma meeleolu, oma värvipõhi — kogutud
