@@ -48,6 +48,7 @@ export const artworks = [
   { id: "loomad-4", title: "Kavalpea", category: "loomad", medium: "Akvarell paberil", year: 2025, img: "/pildid/reba.jpg" },
   { id: "loomad-5", title: "Elevant", category: "loomad", medium: "Segatehnika", year: 2025, img: "/pildid/elevant.jpg" },
   { id: "loomad-5", title: "Pruun lehm", category: "loomad", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/pruunlehm.jpg" },
+  { id: "loomad-5", title: "Highland cow", category: "loomad", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/pull.jpg" },
   
   // Linnud
   { id: "loodus-1", title: "Loorkakk", category: "linnud", medium: "Akvarell paberil", year: 2023, img: "/pildid/kulllwebi.jpg" },
@@ -56,18 +57,19 @@ export const artworks = [
   { id: "loodus-4", title: "Papagoid", category: "linnud", medium: "Akrüül lõuendil", year: 2023, img: "/pildid/papad2.jpg" },
   { id: "loodus-5", title: "Papagoi paarike", category: "linnud", medium: "Segatehnika", year: 2024, img: "/pildid/papad1.jpg" },
   { id: "loodus-6", title: "Jaanalinnud", category: "linnud", medium: "Segatehnika", year: 2025, img: "/pildid/linnudjaan.jpg" },
-  { id: "loodus-1", title: "Haigrud", category: "linnud", medium: "Akvarell paberil", year: 2023, img: "/pildid/linnudhaigrud.jpg" },
-  { id: "loodus-2", title: "", category: "linnud", medium: "Akvarell paberil", year: 2024, img: null },
-  { id: "loodus-3", title: "", category: "linnud", medium: "Segatehnika", year: 2025, img: null },
+  { id: "loodus-7", title: "Haigrud", category: "linnud", medium: "Akvarell paberil", year: 2023, img: "/pildid/linnudhaigrud.jpg" },
+  { id: "loodus-8", title: "Autumn owl", category: "linnud", medium: "Akvarell paberil", year: 2026, img: "pildid/okuloranz.jpg" },
+  { id: "loodus-10", title: "Lipsuga kajakas", category: "linnud", medium: "Segatehnika", year: 2025, img: "pildid/kajak1.jpg" },
+  
   // Illustratsioonid
   { id: "illustratsioonid-1", title: "Steampunk lõvi", category: "illustratsioonid", medium: "Akvarell paberil", year: 2023, img: "/pildid/puklion.jpg" },
   { id: "illustratsioonid-2", title: "Jäneste ying-yang", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2024, img: "/pildid/illo2.jpg" },
   { id: "illustratsioonid-3", title: "Uudishimulik", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/illo1.jpg" },
   { id: "illustratsioonid-4", title: "Unine öökull", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2024, img: "/pildid/illo4.jpg" },
   { id: "illustratsioonid-5", title: "Tüütu linnuke", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/illo5.jpg" },
-  { id: "illustratsioonid-6", title: "Jäneste ying-yang", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2024, img: "/pildid/illo2.jpg" },
-  { id: "illustratsioonid-7", title: "Uudishimulik", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/illo1.jpg" },
-  { id: "illustratsioonid-7", title: "Suur Tõll", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/illo7.jpg" },
+  { id: "illustratsioonid-6", title: "Huginn", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2024, img: "/pildid/hugin.jpg" },
+  { id: "illustratsioonid-7", title: "Muninn", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/munin.jpg" },
+  { id: "illustratsioonid-8", title: "Suur Tõll", category: "illustratsioonid", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/illo7.jpg" },
  
   // Abstraktne
   { id: "abstraktne-1", title: "Õun", category: "abstraktne", medium: "Segatehnika", year: 2024, img: "/pildid/oun.jpg" },
@@ -75,7 +77,9 @@ export const artworks = [
   { id: "abstraktne-3", title: "Abstract 2", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/absr2.jpg" },
   { id: "abstraktne-4", title: "Abstract 3", category: "abstraktne", medium: "Segatehnika", year: 2024, img: "/pildid/abstr3.jpg" },
   { id: "abstraktne-5", title: "Abstract 4", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/absr4.jpg" },
+  { id: "abstraktne-5", title: "Abstract 5", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/abstra6.jpg" },
   
+
   // Segatehnika
   { id: "segatehnika-1", title: "Pealkiri 5.1", category: "segatehnika", medium: "Kollaaž ja akrüül", year: 2023, img: null },
   { id: "segatehnika-2", title: "Pealkiri 5.2", category: "segatehnika", medium: "Kollaaž ja akrüül", year: 2024, img: null },

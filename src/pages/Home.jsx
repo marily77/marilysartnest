@@ -19,7 +19,7 @@ export default function Home() {
             Minu värviline, <em>maailm.</em>
           </h1>
           <p className="hero__lede">
-            Igal teemal oma materjal, oma meeleolu, oma värvipõhi — kogutud
+            Igal teemal oma materjal, oma meeleolu, oma värvipalett — kogutud
             siia ühte kodusesse pesasse.
           </p>
           <div className="hero__actions">
