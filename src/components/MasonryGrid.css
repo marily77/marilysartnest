@@ -1,0 +1,22 @@
+.masonry {
+  column-count: 4;
+  column-gap: 18px;
+}
+
+.masonry__item {
+  break-inside: avoid;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 1200px) {
+  .masonry { column-count: 3; }
+}
+
+@media (max-width: 760px) {
+  .masonry { column-count: 2; column-gap: 12px; }
+  .masonry__item { margin-bottom: 12px; }
+}
+
+@media (max-width: 480px) {
+  .masonry { column-count: 1; }
+}

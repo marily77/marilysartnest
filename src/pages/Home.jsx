@@ -1,69 +1,53 @@
-import { Link } from "react-router-dom";
-import PaintBloom from "../components/PaintBloom";
-import ArtworkCard from "../components/ArtworkCard";
-import { categories, featured } from "../data/artworks";
-import useReveal from "../hooks/useReveal";
+import { useMemo, useState } from "react";
+import MasonryGrid from "../components/MasonryGrid";
+import Lightbox from "../components/Lightbox";
+import { artworks, categories } from "../data/artworks";
 import "./Home.css";
 
+// Mitu tööd iga teema kohta avalehe "teaser" brick-vaates.
+const PER_CATEGORY = 3;
+
 export default function Home() {
-  const scopeRef = useReveal();
-  const byId = Object.fromEntries(categories.map((c) => [c.id, c]));
+  const byId = useMemo(
+    () => Object.fromEntries(categories.map((c) => [c.id, c])),
+    []
+  );
+
+  // Võtame igast teemast esimesed N tööd ja põimime need "round robin" viisil,
+  // et brick-laotus näeks orgaaniline välja (mitte teemade kaupa plokkidena).
+  const teaser = useMemo(() => {
+    const byCategory = categories.map((cat) =>
+      artworks.filter((a) => a.category === cat.id).slice(0, PER_CATEGORY)
+    );
+    const max = Math.max(0, ...byCategory.map((arr) => arr.length));
+    const mixed = [];
+    for (let i = 0; i < max; i++) {
+      byCategory.forEach((arr) => {
+        if (arr[i]) mixed.push(arr[i]);
+      });
+    }
+    return mixed;
+  }, []);
+
+  const [openIndex, setOpenIndex] = useState(null);
+  const openArtwork = teaser[openIndex] ?? null;
+
+  const goPrev = () =>
+    setOpenIndex((i) => (i === null ? null : (i - 1 + teaser.length) % teaser.length));
+  const goNext = () =>
+    setOpenIndex((i) => (i === null ? null : (i + 1) % teaser.length));
 
   return (
-    <div ref={scopeRef}>
-      <section className="hero">
-        <PaintBloom />
-        <div className="container hero__inner">
-          <p className="eyebrow">Marily &middot; maalikunst</p>
-          <h1 className="hero__title">
-            Minu värviline, <em>maailm.</em>
-          </h1>
-          <p className="hero__lede">
-            Igal teemal oma materjal, oma meeleolu, oma värvipalett — kogutud
-            siia ühte kodusesse pesasse.
-          </p>
-          <div className="hero__actions">
-            <Link className="btn btn--primary" to="/gallery">
-              Vaata galeriid
-            </Link>
-            <Link className="btn btn--ghost" to="/about">
-              Minu lugu
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="container section">
-        <div className="section__head" data-reveal>
-          <p className="eyebrow">Esiletõstetud</p>
-          <h2>Hiljutised tööd</h2>
-        </div>
-        <div className="grid grid--4">
-          {featured.map((art) => (
-            <ArtworkCard key={art.id} artwork={art} categoryMeta={byId[art.category]} />
-          ))}
-        </div>
-      </section>
-
-      <section className="container section categories">
-        <div className="section__head" data-reveal>
-          <p className="eyebrow">Teemad</p>
-          <h2>Iga teema räägib oma keeles</h2>
-        </div>
-        <div className="categories__row" data-reveal>
-          {categories.map((cat) => (
-            <Link
-              key={cat.id}
-              to={`/gallery?theme=${cat.id}`}
-              className="chip"
-              style={{ "--card-accent": cat.accent }}
-            >
-              <span className="chip__dot" />
-              {cat.label}
-            </Link>
-          ))}
-        </div>
-      </section>
+    <div className="home">
+      <p className="eyebrow home__eyebrow">Marily &middot; maalikunst</p>
+      <MasonryGrid artworks={teaser} categoriesById={byId} onOpen={setOpenIndex} />
+      <Lightbox
+        artwork={openArtwork}
+        categoryMeta={openArtwork ? byId[openArtwork.category] : null}
+        onClose={() => setOpenIndex(null)}
+        onPrev={goPrev}
+        onNext={goNext}
+      />
     </div>
   );
 }

@@ -47,8 +47,8 @@ export const artworks = [
   { id: "loomad-3", title: "Kaelkirjakud", category: "loomad", medium: "Akvarell paberil", year: 2025, img: "/pildid/kirjakud.jpg" },
   { id: "loomad-4", title: "Kavalpea", category: "loomad", medium: "Akvarell paberil", year: 2025, img: "/pildid/reba.jpg" },
   { id: "loomad-5", title: "Elevant", category: "loomad", medium: "Segatehnika", year: 2025, img: "/pildid/elevant.jpg" },
-  { id: "loomad-5", title: "Pruun lehm", category: "loomad", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/pruunlehm.jpg" },
-  { id: "loomad-5", title: "Highland cow", category: "loomad", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/pull.jpg" },
+  { id: "loomad-6", title: "Pruun lehm", category: "loomad", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/pruunlehm.jpg" },
+  { id: "loomad-7", title: "Highland cow", category: "loomad", medium: "Akrüül lõuendil", year: 2025, img: "/pildid/pull.jpg" },
   
   // Linnud
   { id: "loodus-1", title: "Loorkakk", category: "linnud", medium: "Akvarell paberil", year: 2023, img: "/pildid/kulllwebi.jpg" },
@@ -77,7 +77,7 @@ export const artworks = [
   { id: "abstraktne-3", title: "Abstract 2", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/absr2.jpg" },
   { id: "abstraktne-4", title: "Abstract 3", category: "abstraktne", medium: "Segatehnika", year: 2024, img: "/pildid/abstr3.jpg" },
   { id: "abstraktne-5", title: "Abstract 4", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/absr4.jpg" },
-  { id: "abstraktne-5", title: "Abstract 5", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/abstra6.jpg" },
+  { id: "abstraktne-6", title: "Abstract 5", category: "abstraktne", medium: "Segatehnika", year: 2025, img: "/pildid/abstra6.jpg" },
   
 
   // Segatehnika
