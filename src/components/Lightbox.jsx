@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./Lightbox.css";
 
 export default function Lightbox({ artwork, categoryMeta, onClose, onPrev, onNext }) {
+  const { t, i18n } = useTranslation();
   const [zoomed, setZoomed] = useState(false);
+  const isEn = i18n.language === "en";
 
   useEffect(() => {
     if (!artwork) return;
@@ -26,10 +29,13 @@ export default function Lightbox({ artwork, categoryMeta, onClose, onPrev, onNex
 
   if (!artwork) return null;
 
+  const title = (isEn && artwork.titleEn) || artwork.title;
+  const catLabel = (isEn && categoryMeta.labelEn) || categoryMeta.label;
+
   return (
     <div className="lightbox" onClick={onClose} role="dialog" aria-modal="true">
       <div className="lightbox__panel" onClick={(e) => e.stopPropagation()}>
-        <button className="lightbox__close" onClick={onClose} aria-label="Sulge">
+        <button className="lightbox__close" onClick={onClose} aria-label={t("lightbox.close")}>
           ×
         </button>
 
@@ -39,7 +45,7 @@ export default function Lightbox({ artwork, categoryMeta, onClose, onPrev, onNex
             e.stopPropagation();
             onPrev?.();
           }}
-          aria-label="Eelmine pilt"
+          aria-label={t("lightbox.prev")}
         >
           ‹
         </button>
@@ -49,7 +55,7 @@ export default function Lightbox({ artwork, categoryMeta, onClose, onPrev, onNex
             e.stopPropagation();
             onNext?.();
           }}
-          aria-label="Järgmine pilt"
+          aria-label={t("lightbox.next")}
         >
           ›
         </button>
@@ -60,9 +66,9 @@ export default function Lightbox({ artwork, categoryMeta, onClose, onPrev, onNex
           onClick={() => setZoomed((z) => !z)}
         >
           {artwork.img ? (
-            <img src={artwork.img} alt={artwork.title} />
+            <img src={artwork.img} alt={title} />
           ) : (
-            <span className="lightbox__placeholder">{categoryMeta.label}</span>
+            <span className="lightbox__placeholder">{catLabel}</span>
           )}
         </div>
       </div>

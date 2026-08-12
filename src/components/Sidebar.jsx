@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { categories } from "../data/artworks";
+import LanguageSwitcher from "./LanguageSwitcher";
 import "./Sidebar.css";
 
 const socials = [
@@ -25,7 +27,7 @@ const socials = [
     ),
   },
   {
-    label: "E-post",
+    labelKey: "footer.email",
     href: "mailto:marily77@gmail.com",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
@@ -37,9 +39,11 @@ const socials = [
 ];
 
 export default function Sidebar() {
+  const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
   const year = new Date().getFullYear();
   const close = () => setOpen(false);
+  const isEn = i18n.language === "en";
 
   return (
     <>
@@ -71,7 +75,7 @@ export default function Sidebar() {
               style={{ "--card-accent": cat.accent }}
             >
               <span className="sidebar__dot" />
-              {cat.label}
+              {isEn ? cat.labelEn : cat.label}
             </NavLink>
           ))}
 
@@ -84,7 +88,7 @@ export default function Sidebar() {
               "sidebar__link" + (isActive ? " sidebar__link--active" : "")
             }
           >
-            About
+            {t("nav.about")}
           </NavLink>
           <NavLink
             to="/contact"
@@ -93,18 +97,28 @@ export default function Sidebar() {
               "sidebar__link" + (isActive ? " sidebar__link--active" : "")
             }
           >
-            Contact
+            {t("nav.contact")}
           </NavLink>
         </nav>
 
         <div className="sidebar__socials">
           {socials.map((s) => (
-            <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}>
+            <a
+              key={s.labelKey ?? s.label}
+              href={s.href}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={s.labelKey ? t(s.labelKey) : s.label}
+            >
               {s.icon}
             </a>
           ))}
         </div>
-        <p className="sidebar__copy">&copy; {year} Marily</p>
+
+        <div className="sidebar__bottom-row">
+          <p className="sidebar__copy">&copy; {year} Marily</p>
+          <LanguageSwitcher />
+        </div>
       </aside>
 
       {open && <div className="sidebar__scrim" onClick={close} />}

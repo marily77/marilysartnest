@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "Minust",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "eyebrow": "Marily · maalikunst"
+  },
+  "footer": {
+    "email": "E-post"
+  },
+  "lightbox": {
+    "close": "Sulge",
+    "prev": "Eelmine pilt",
+    "next": "Järgmine pilt"
+  },
+  "about": {
+    "eyebrow": "Minu lugu",
+    "title": "Kolm käsitööd, üks käsi.",
+    "lede": "Enne kui pintsel sai peamiseks tööriistaks, on samad käed lõiganud juukseid, seadnud lilli ja joonistanud aastaid — igaüks neist õpetas midagi värvist, vormist ja kärsitusest, mis lõpuks kunstis kokku said. Olen colorholic: värv on mulle keel, milles mõtlen.",
+    "blocks": {
+      "art": {
+        "title": "Kunst",
+        "text": "Maalin ja joonistan mitmes tehnikas — akrüül, õli, akvarell, segatehnika. Mind huvitavad tugevad, julged värvid ja teemad, mis ulatuvad loomadest portreedeni ja loodusest abstraktsuseni."
+      },
+      "floristry": {
+        "title": "Floristika",
+        "text": "Üle kümne aasta floristina, praegu Öölill — töö lilledega on õpetanud kompositsiooni, hooajalisust ja värvi käsitsemist orgaanilisel moel."
+      },
+      "hairdressing": {
+        "title": "Juuksurindus",
+        "text": "Sama pikk karjäär juuksurina õpetas täpsust, vormitunnetust ja inimesega töötamist — oskused, mis kanduvad üle igasse loomingulisse töösse."
+      }
+    },
+    "timelineEyebrow": "Teekond",
+    "milestones": [
+      { "year": "London Art College", "text": "Diplomid joonistamises ja maalimises ning laste raamatute illustreerimises." },
+      { "year": "Näitus", "text": "Pärnu Uue Kunsti Muuseum." },
+      { "year": "Näitus", "text": "Saaremaa Artclub." },
+      { "year": "Rahvusvaheline", "text": "Association of Animal Artists UK — näitused ja tunnustus." },
+      { "year": "Praegu", "text": "Loon uusi teoseid, osalen näitustel ja jagan töid galeriis siin." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Räägime värvidest",
+    "lede": "Küsimused teoste, tellimuste või koostöö kohta — kirjuta julgelt.",
+    "name": "Nimi",
+    "email": "E-post",
+    "message": "Sõnum",
+    "send": "Saada sõnum",
+    "success": "Aitäh! Sõnum on saadetud — vastan esimesel võimalusel.",
+    "direct": "Otse",
+    "follow": "Jälgi"
+  }
+}

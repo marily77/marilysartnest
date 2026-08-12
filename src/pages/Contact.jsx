@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import useReveal from "../hooks/useReveal";
 import "./Contact.css";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const scopeRef = useReveal();
   const [sent, setSent] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -19,23 +21,19 @@ export default function Contact() {
   return (
     <div className="container section" ref={scopeRef}>
       <div className="contact__head" data-reveal>
-        <p className="eyebrow">Kontakt</p>
-        <h1 className="contact__title">Räägime värvidest</h1>
-        <p className="contact__lede">
-          Küsimused teoste, tellimuste või koostöö kohta — kirjuta julgelt.
-        </p>
+        <p className="eyebrow">{t("contact.eyebrow")}</p>
+        <h1 className="contact__title">{t("contact.title")}</h1>
+        <p className="contact__lede">{t("contact.lede")}</p>
       </div>
 
       <div className="contact__grid">
         <form className="contact__form" onSubmit={handleSubmit} data-reveal>
           {sent ? (
-            <p className="contact__success">
-              Aitäh! Sõnum on saadetud — vastan esimesel võimalusel.
-            </p>
+            <p className="contact__success">{t("contact.success")}</p>
           ) : (
             <>
               <label className="field">
-                <span>Nimi</span>
+                <span>{t("contact.name")}</span>
                 <input
                   name="name"
                   value={form.name}
@@ -44,7 +42,7 @@ export default function Contact() {
                 />
               </label>
               <label className="field">
-                <span>E-post</span>
+                <span>{t("contact.email")}</span>
                 <input
                   type="email"
                   name="email"
@@ -54,7 +52,7 @@ export default function Contact() {
                 />
               </label>
               <label className="field">
-                <span>Sõnum</span>
+                <span>{t("contact.message")}</span>
                 <textarea
                   name="message"
                   rows={5}
@@ -64,7 +62,7 @@ export default function Contact() {
                 />
               </label>
               <button className="btn btn--primary" type="submit">
-                Saada sõnum
+                {t("contact.send")}
               </button>
             </>
           )}
@@ -72,18 +70,18 @@ export default function Contact() {
 
         <div className="contact__aside" data-reveal>
           <div className="contact__card">
-            <p className="eyebrow">Otse</p>
-            <a href="mailto:hello@marilysartnest.com" className="contact__email">
-              hello@marilysartnest.com
+            <p className="eyebrow">{t("contact.direct")}</p>
+            <a href="mailto:marily77@gmail.com" className="contact__email">
+              marily77@gmail.com
             </a>
           </div>
           <div className="contact__card">
-            <p className="eyebrow">Jälgi</p>
+            <p className="eyebrow">{t("contact.follow")}</p>
             <div className="contact__socials">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <a href="https://instagram.com/marilysartnest" target="_blank" rel="noreferrer">
                 Instagram
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <a href="https://facebook.com/marilysartnest" target="_blank" rel="noreferrer">
                 Facebook
               </a>
             </div>

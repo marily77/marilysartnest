@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import MasonryGrid from "../components/MasonryGrid";
 import Lightbox from "../components/Lightbox";
 import { artworks, categories } from "../data/artworks";
@@ -9,6 +10,8 @@ import "./Gallery.css";
 // sama komponenti — URL "/loomad", "/linnud" jne, vastavalt sidebar'i linkidele.
 export default function Gallery() {
   const { themeId } = useParams();
+  const { i18n } = useTranslation();
+  const isEn = i18n.language === "en";
   const byId = useMemo(
     () => Object.fromEntries(categories.map((c) => [c.id, c])),
     []
@@ -38,7 +41,7 @@ export default function Gallery() {
     <div className="gallery">
       <p className="eyebrow gallery__eyebrow" style={{ "--card-accent": cat.accent }}>
         <span className="gallery__dot" />
-        {cat.label}
+        {isEn ? cat.labelEn : cat.label}
       </p>
       <MasonryGrid artworks={filtered} categoriesById={byId} onOpen={setOpenIndex} />
       <Lightbox

@@ -1,0 +1,32 @@
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.lang-switch__btn {
+  background: none;
+  border: none;
+  padding: 2px 2px;
+  color: var(--ink-soft);
+  transition: color 0.2s ease;
+}
+
+.lang-switch__btn:hover {
+  color: var(--ink);
+}
+
+.lang-switch__btn--active {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent);
+}
+
+.lang-switch__sep {
+  color: var(--line);
+}

@@ -94,11 +94,19 @@
   height: 19px;
 }
 
+.sidebar__bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 12px 6px 0;
+}
+
 .sidebar__copy {
   font-family: var(--font-mono);
   font-size: 0.68rem;
   color: var(--ink-soft);
-  margin: 12px 6px 0;
+  margin: 0;
 }
 
 .sidebar__toggle {

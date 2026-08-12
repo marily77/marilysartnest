@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "eyebrow": "Marily · paintings"
+  },
+  "footer": {
+    "email": "Email"
+  },
+  "lightbox": {
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image"
+  },
+  "about": {
+    "eyebrow": "My story",
+    "title": "Three crafts, one hand.",
+    "lede": "Before the brush became the main tool, these same hands cut hair, arranged flowers and drew for years — each one taught something about colour, form and patience that eventually came together in art. I'm a colorholic: colour is the language I think in.",
+    "blocks": {
+      "art": {
+        "title": "Art",
+        "text": "I paint and draw in several techniques — acrylic, oil, watercolour, mixed media. I'm drawn to bold, confident colours and subjects ranging from animals to portraits, from nature to abstraction."
+      },
+      "floristry": {
+        "title": "Floristry",
+        "text": "Over ten years as a florist, currently at Öölill — working with flowers has taught composition, seasonality and handling colour in an organic way."
+      },
+      "hairdressing": {
+        "title": "Hairdressing",
+        "text": "An equally long career as a hairdresser taught precision, a sense of form and working with people — skills that carry into every creative project."
+      }
+    },
+    "timelineEyebrow": "Journey",
+    "milestones": [
+      { "year": "London Art College", "text": "Diplomas in Drawing & Painting and in Children's Book Illustration." },
+      { "year": "Exhibition", "text": "Pärnu Museum of New Art." },
+      { "year": "Exhibition", "text": "Saaremaa Artclub." },
+      { "year": "International", "text": "Association of Animal Artists UK — exhibitions and recognition." },
+      { "year": "Now", "text": "Creating new work, exhibiting, and sharing pieces here in the gallery." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk colour",
+    "lede": "Questions about a piece, a commission, or a collaboration — write any time.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message",
+    "success": "Thank you! Your message has been sent — I'll reply as soon as I can.",
+    "direct": "Direct",
+    "follow": "Follow"
+  }
+}

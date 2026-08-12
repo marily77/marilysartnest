@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import MasonryGrid from "../components/MasonryGrid";
 import Lightbox from "../components/Lightbox";
 import { artworks, categories } from "../data/artworks";
@@ -8,6 +9,7 @@ import "./Home.css";
 const PER_CATEGORY = 3;
 
 export default function Home() {
+  const { t } = useTranslation();
   const byId = useMemo(
     () => Object.fromEntries(categories.map((c) => [c.id, c])),
     []
@@ -39,7 +41,7 @@ export default function Home() {
 
   return (
     <div className="home">
-      <p className="eyebrow home__eyebrow">Marily &middot; maalikunst</p>
+      <p className="eyebrow home__eyebrow">{t("home.eyebrow")}</p>
       <MasonryGrid artworks={teaser} categoriesById={byId} onOpen={setOpenIndex} />
       <Lightbox
         artwork={openArtwork}
