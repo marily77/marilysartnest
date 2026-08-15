@@ -15,31 +15,121 @@
     "next": "Järgmine pilt"
   },
   "about": {
-    "eyebrow": "Minu lugu",
-    "title": "Kolm käsitööd, üks käsi.",
-    "lede": "Enne kui pintsel sai peamiseks tööriistaks, on samad käed lõiganud juukseid, seadnud lilli ja joonistanud aastaid — igaüks neist õpetas midagi värvist, vormist ja kärsitusest, mis lõpuks kunstis kokku said. Olen colorholic: värv on mulle keel, milles mõtlen.",
-    "blocks": {
-      "art": {
-        "title": "Kunst",
-        "text": "Maalin ja joonistan mitmes tehnikas — akrüül, õli, akvarell, segatehnika. Mind huvitavad tugevad, julged värvid ja teemad, mis ulatuvad loomadest portreedeni ja loodusest abstraktsuseni."
+    "eyebrow": "Tere-tere",
+    "title": "Marily Valkijainen",
+    "lede": "Olen kunstnik, kes armastab tabada loomade ilu ja hinge erksavärviliste portreede ja illustratsioonide kaudu. Minu looming ühendab julged, elavad värvid mängulise ja naivistliku stiiliga, mis annab igale tööle energiat ja soojust. Naudin ka abstraktse kunstiga eksperimenteerimist, kus lasen kujutlusvõimel vabalt lennata. Iga pintslitõmme peegeldab minu kirge värvi, looduse ja sellise kunsti loomise vastu, mis kiirgab positiivsust ja rõõmu.",
+    "photoAlt": "Marily Valkijaineni portree",
+    "facts": [
+      {
+        "label": "Nimi",
+        "value": "Marily Valkijainen"
       },
-      "floristry": {
-        "title": "Floristika",
-        "text": "Üle kümne aasta floristina, praegu Öölill — töö lilledega on õpetanud kompositsiooni, hooajalisust ja värvi käsitsemist orgaanilisel moel."
+      {
+        "label": "Sünnipäev",
+        "value": "02.07.1977"
       },
-      "hairdressing": {
-        "title": "Juuksurindus",
-        "text": "Sama pikk karjäär juuksurina õpetas täpsust, vormitunnetust ja inimesega töötamist — oskused, mis kanduvad üle igasse loomingulisse töösse."
+      {
+        "label": "Asukoht",
+        "value": "Eesti"
       }
-    },
-    "timelineEyebrow": "Teekond",
-    "milestones": [
-      { "year": "London Art College", "text": "Diplomid joonistamises ja maalimises ning laste raamatute illustreerimises." },
-      { "year": "Näitus", "text": "Pärnu Uue Kunsti Muuseum." },
-      { "year": "Näitus", "text": "Saaremaa Artclub." },
-      { "year": "Rahvusvaheline", "text": "Association of Animal Artists UK — näitused ja tunnustus." },
-      { "year": "Praegu", "text": "Loon uusi teoseid, osalen näitustel ja jagan töid galeriis siin." }
-    ]
+    ],
+    "sections": [
+      {
+        "title": "Haridus",
+        "items": [
+          {
+            "year": "2021–2023",
+            "text": "Interaktsioonidisaini UI/UX diplom — Kuressaare Ametikool, Saaremaa"
+          },
+          {
+            "year": "2018–2021",
+            "text": "Graafilise disaini diplom — Kuressaare Ametikool, Saaremaa"
+          },
+          {
+            "year": "2011–2013",
+            "text": "Joonistamise ja maalimise diplom — London Art College, London, Ühendkuningriik"
+          }
+        ]
+      },
+      {
+        "title": "Ühisnäitused",
+        "items": [
+          {
+            "year": "2025–2026",
+            "text": "Pärnu Uue Kunsti Muuseum, Pärnu"
+          },
+          {
+            "year": "2026",
+            "text": "Saaremaa Kunstiklubi 47. näitus, Kuressaare, Saaremaa"
+          },
+          {
+            "year": "2025",
+            "text": "Saaremaa Kunstiklubi 46. näitus, Kuressaare, Saaremaa"
+          },
+          {
+            "year": "2024",
+            "text": "Saaremaa Kunstiklubi 45. näitus, Kuressaare, Saaremaa"
+          },
+          {
+            "year": "2023",
+            "text": "Saaremaa Kunstiklubi 44. näitus, Kuressaare, Saaremaa"
+          },
+          {
+            "year": "2022",
+            "text": "Saaremaa Kunstiklubi 43. näitus, Kuressaare, Saaremaa"
+          },
+          {
+            "year": "2017",
+            "text": "Association of Animal Artists „Autumn Exhibition“, Richmond, North Yorkshire, Ühendkuningriik"
+          }
+        ]
+      },
+      {
+        "title": "Isikunäitused",
+        "items": [
+          {
+            "year": "2021",
+            "text": "Isikunäitus „Colorful Animals“, Kuressaare, Saaremaa"
+          },
+          {
+            "year": "2020",
+            "text": "Isikunäitus „Colorful Animals“, Nasva, Saaremaa"
+          }
+        ]
+      },
+      {
+        "title": "Auhinnad ja tunnustused",
+        "items": [
+          {
+            "year": "2015",
+            "text": "„The Lion“ — Special Merit, Open (No Theme) Art Exhibition, Light Space & Time veebigalerii",
+            "link": "https://www.lightspacetime.com/exhibition-archives/open-no-theme-art-exhibition-september-2015",
+            "linkLabel": "Vaata galeriid"
+          },
+          {
+            "year": "2015",
+            "text": "„The Fox“ — Special Merit, „Animals“ Art Exhibition, Light Space & Time veebigalerii"
+          },
+          {
+            "year": "2015",
+            "text": "„Kingfisher“ — Special Recognition, „Animals“ Art Exhibition, Light Space & Time veebigalerii"
+          }
+        ]
+      },
+      {
+        "title": "Publikatsioonid ja meedia",
+        "items": [
+          {
+            "year": "2015",
+            "text": "„Rainbow Lion“ avaldatud Society for All Artists ajakirjas „Paint“, Ühendkuningriik"
+          }
+        ]
+      }
+    ],
+    "outro": {
+      "text": "Ja kui maalimisest aega üle jääb… vahetan pintsli klaviatuuri vastu ning mängin disaini ja koodiga.",
+      "linkLabel": "marilydesign.com →"
+    }
   },
   "contact": {
     "eyebrow": "Kontakt",

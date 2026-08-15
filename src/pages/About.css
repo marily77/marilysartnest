@@ -1,6 +1,24 @@
+
+/* ---- Hero: photo + intro ---- */
+.about__hero {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.about__photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--paper);
+  box-shadow: 0 0 0 1px var(--line), 0 10px 24px rgba(28, 26, 23, 0.1);
+  flex-shrink: 0;
+}
+
 .about__intro {
   max-width: 640px;
-  margin-bottom: 56px;
 }
 
 .about__title {
@@ -16,69 +34,147 @@
   line-height: 1.6;
 }
 
-.about__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 64px;
+@media (max-width: 640px) {
+  .about__hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+  }
+  .about__photo {
+    width: 130px;
+    height: 130px;
+  }
 }
 
-.about__block {
+/* ---- Quick facts ---- */
+.about__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 0 64px;
+  padding: 0;
+}
+
+.about__fact {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 26px 24px;
+  padding: 14px 22px;
+  min-width: 150px;
 }
 
-.about__block h3 {
-  font-family: var(--font-display);
-  margin: 0 0 10px;
+.about__fact dt {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
 }
 
-.about__block p {
-  color: var(--ink-soft);
-  font-size: 0.94rem;
-  line-height: 1.55;
+.about__fact dd {
   margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.02rem;
 }
 
-@media (max-width: 800px) {
-  .about__grid { grid-template-columns: 1fr; }
+/* ---- CV sections ---- */
+.about__cv {
+  max-width: 720px;
 }
 
-.timeline {
+.cv__section {
+  margin-bottom: 52px;
+}
+
+.cv__heading {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cv__list {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0;
+  margin: 0;
   border-left: 1px solid var(--line);
 }
 
-.timeline__item {
+.cv__item {
   position: relative;
-  padding: 0 0 26px 26px;
+  padding: 0 0 20px 24px;
 }
 
-.timeline__item::before {
+.cv__item:last-child {
+  padding-bottom: 0;
+}
+
+.cv__item::before {
   content: "";
   position: absolute;
   left: -5px;
-  top: 4px;
+  top: 6px;
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background: var(--accent);
 }
 
-.timeline__year {
+.cv__year {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
-.timeline__text {
+.cv__text {
   color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.cv__link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cv__link:hover {
+  opacity: 0.75;
+}
+
+/* ---- Funky outro ---- */
+.about__outro {
+  margin-top: 24px;
+  padding: 28px 30px;
+  background: var(--bg-soft);
+  border: 1px dashed var(--accent-soft);
+  border-radius: var(--radius);
+  max-width: 720px;
+  transform: rotate(-0.4deg);
+}
+
+.about__outro p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.about__outro-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+.about__outro-link:hover {
+  opacity: 0.75;
 }

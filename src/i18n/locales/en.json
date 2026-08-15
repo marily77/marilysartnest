@@ -15,31 +15,121 @@
     "next": "Next image"
   },
   "about": {
-    "eyebrow": "My story",
-    "title": "Three crafts, one hand.",
-    "lede": "Before the brush became the main tool, these same hands cut hair, arranged flowers and drew for years — each one taught something about colour, form and patience that eventually came together in art. I'm a colorholic: colour is the language I think in.",
-    "blocks": {
-      "art": {
-        "title": "Art",
-        "text": "I paint and draw in several techniques — acrylic, oil, watercolour, mixed media. I'm drawn to bold, confident colours and subjects ranging from animals to portraits, from nature to abstraction."
+    "eyebrow": "Hey There",
+    "title": "Marily Valkijainen",
+    "lede": "I'm an artist who loves capturing the beauty and spirit of animals through vibrant portraits and illustrations. My work blends bold, vivid colors with a playful, naive style that brings each piece to life with energy and warmth. I also enjoy experimenting with abstract art, where I let my imagination run wild. Every brushstroke reflects my passion for color, nature, and creating art that radiates positivity and joy.",
+    "photoAlt": "Portrait of Marily Valkijainen",
+    "facts": [
+      {
+        "label": "Name",
+        "value": "Marily Valkijainen"
       },
-      "floristry": {
-        "title": "Floristry",
-        "text": "Over ten years as a florist, currently at Öölill — working with flowers has taught composition, seasonality and handling colour in an organic way."
+      {
+        "label": "Birthday",
+        "value": "02.07.1977"
       },
-      "hairdressing": {
-        "title": "Hairdressing",
-        "text": "An equally long career as a hairdresser taught precision, a sense of form and working with people — skills that carry into every creative project."
+      {
+        "label": "Location",
+        "value": "Estonia"
       }
-    },
-    "timelineEyebrow": "Journey",
-    "milestones": [
-      { "year": "London Art College", "text": "Diplomas in Drawing & Painting and in Children's Book Illustration." },
-      { "year": "Exhibition", "text": "Pärnu Museum of New Art." },
-      { "year": "Exhibition", "text": "Saaremaa Artclub." },
-      { "year": "International", "text": "Association of Animal Artists UK — exhibitions and recognition." },
-      { "year": "Now", "text": "Creating new work, exhibiting, and sharing pieces here in the gallery." }
-    ]
+    ],
+    "sections": [
+      {
+        "title": "Education",
+        "items": [
+          {
+            "year": "2021–2023",
+            "text": "Interaction Design UI/UX Diploma — Kuressaare Regional Training School, Saaremaa, Estonia"
+          },
+          {
+            "year": "2018–2021",
+            "text": "Graphic Design Diploma — Kuressaare Regional Training School, Saaremaa, Estonia"
+          },
+          {
+            "year": "2011–2013",
+            "text": "Diploma in Drawing and Painting — London Art College, London, United Kingdom"
+          }
+        ]
+      },
+      {
+        "title": "Collective Exhibitions",
+        "items": [
+          {
+            "year": "2025–2026",
+            "text": "Pärnu Museum of New Art, Pärnu, Estonia"
+          },
+          {
+            "year": "2026",
+            "text": "Saaremaa Artclub 47th Exhibition, Kuressaare, Saaremaa, Estonia"
+          },
+          {
+            "year": "2025",
+            "text": "Saaremaa Artclub 46th Exhibition, Kuressaare, Saaremaa, Estonia"
+          },
+          {
+            "year": "2024",
+            "text": "Saaremaa Artclub 45th Exhibition, Kuressaare, Saaremaa, Estonia"
+          },
+          {
+            "year": "2023",
+            "text": "Saaremaa Artclub 44th Exhibition, Kuressaare, Saaremaa, Estonia"
+          },
+          {
+            "year": "2022",
+            "text": "Saaremaa Artclub 43rd Exhibition, Kuressaare, Saaremaa, Estonia"
+          },
+          {
+            "year": "2017",
+            "text": "Association of Animal Artists “Autumn Exhibition”, Richmond, North Yorkshire, United Kingdom"
+          }
+        ]
+      },
+      {
+        "title": "Solo Exhibitions",
+        "items": [
+          {
+            "year": "2021",
+            "text": "Solo Exhibition “Colorful Animals”, Kuressaare, Saaremaa, Estonia"
+          },
+          {
+            "year": "2020",
+            "text": "Solo Exhibition “Colorful Animals”, Nasva, Saaremaa, Estonia"
+          }
+        ]
+      },
+      {
+        "title": "Prizes & Awards",
+        "items": [
+          {
+            "year": "2015",
+            "text": "“The Lion” — Special Merit, Open (No Theme) Art Exhibition, Light Space & Time Online Gallery",
+            "link": "https://www.lightspacetime.com/exhibition-archives/open-no-theme-art-exhibition-september-2015",
+            "linkLabel": "View gallery"
+          },
+          {
+            "year": "2015",
+            "text": "“The Fox” — Special Merit, “Animals” Art Exhibition, Light Space & Time Online Gallery"
+          },
+          {
+            "year": "2015",
+            "text": "“Kingfisher” — Special Recognition, “Animals” Art Exhibition, Light Space & Time Online Gallery"
+          }
+        ]
+      },
+      {
+        "title": "Publications & Press",
+        "items": [
+          {
+            "year": "2015",
+            "text": "“Rainbow Lion” published in the Society for All Artists “Paint” magazine, United Kingdom"
+          }
+        ]
+      }
+    ],
+    "outro": {
+      "text": "And when there's paint left to dry and time left to spare… I swap the brush for a keyboard and play with design & code.",
+      "linkLabel": "marilydesign.com →"
+    }
   },
   "contact": {
     "eyebrow": "Contact",
