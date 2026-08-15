@@ -6,7 +6,7 @@ import { artworks, categories } from "../data/artworks";
 import "./Home.css";
 
 // Mitu tööd iga teema kohta avalehe "teaser" brick-vaates.
-const PER_CATEGORY = 3;
+const PER_CATEGORY = 15;
 
 export default function Home() {
   const { t } = useTranslation();
@@ -17,6 +17,8 @@ export default function Home() {
 
   // Võtame igast teemast esimesed N tööd ja põimime need "round robin" viisil,
   // et brick-laotus näeks orgaaniline välja (mitte teemade kaupa plokkidena).
+
+
   const teaser = useMemo(() => {
     const byCategory = categories.map((cat) =>
       artworks.filter((a) => a.category === cat.id).slice(0, PER_CATEGORY)
