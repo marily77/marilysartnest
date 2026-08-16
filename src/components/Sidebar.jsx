@@ -60,7 +60,11 @@ export default function Sidebar() {
 
       <aside className={"sidebar" + (open ? " sidebar--open" : "")}>
         <NavLink to="/" className="sidebar__brand" onClick={close}>
-          Marily's <em>Art Nest</em>
+          <img
+            src="/public/marilygif.gif"
+            alt="Marily's Art Nest"
+            className="sidebar__logo"
+          />
         </NavLink>
 
         <nav className="sidebar__nav">
