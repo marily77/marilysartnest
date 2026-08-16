@@ -12,7 +12,7 @@ export default function About() {
     <div className="container section" ref={scopeRef}>
       <div className="about__hero">
         <img
-          src="/pildid/marily.jpg"
+          src="/public/pildid/marily.jpg"
           alt={t("about.photoAlt")}
           className="about__photo"
           data-reveal
@@ -71,17 +71,19 @@ export default function About() {
       </div>
 
       <div className="about__outro" data-reveal>
-        <p>
-          {t("about.outro.text")}{" "}
-          <a
-            className="about__outro-link"
-            href="https://www.marilydesign.com"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t("about.outro.linkLabel")}
-          </a>
-        </p>
+        <div className="about__outro-tilt">
+          <p>
+            {t("about.outro.text")}{" "}
+            <a
+              className="about__outro-link"
+              href="https://www.marilydesign.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t("about.outro.linkLabel")}
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   );

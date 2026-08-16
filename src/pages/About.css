@@ -1,4 +1,3 @@
-
 /* ---- Hero: photo + intro ---- */
 .about__hero {
   display: flex;
@@ -137,6 +136,7 @@
 .cv__text {
   color: var(--ink-soft);
   line-height: 1.55;
+  overflow-wrap: break-word;
 }
 
 .cv__link {
@@ -150,13 +150,24 @@
 }
 
 /* ---- Funky outro ---- */
+/* Note: rotation lives on the inner .about__outro-tilt wrapper, not on
+   .about__outro itself, because .about__outro also carries the
+   [data-reveal] fade-in (which animates its own `transform`). Two
+   `transform` declarations on the same element don't combine — the
+   higher-specificity one (.reveal.is-visible) would silently win and
+   the tilt would never actually show. Splitting them onto two nested
+   elements keeps both animations intact. */
 .about__outro {
   margin-top: 24px;
+  max-width: 720px;
+  overflow: hidden;
+}
+
+.about__outro-tilt {
   padding: 28px 30px;
   background: var(--bg-soft);
   border: 1px dashed var(--accent-soft);
   border-radius: var(--radius);
-  max-width: 720px;
   transform: rotate(-0.4deg);
 }
 
@@ -165,6 +176,7 @@
   font-family: var(--font-display);
   font-size: 1.1rem;
   line-height: 1.55;
+  overflow-wrap: break-word;
 }
 
 .about__outro-link {
@@ -172,9 +184,17 @@
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
-  white-space: nowrap;
 }
 
 .about__outro-link:hover {
   opacity: 0.75;
+}
+
+@media (max-width: 640px) {
+  .about__outro-tilt {
+    padding: 22px 20px;
+    /* a full-bleed box on a narrow screen makes even a tiny rotation
+       read as "crooked" rather than "playful" — keep it straight here */
+    transform: none;
+  }
 }

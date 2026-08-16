@@ -34,6 +34,12 @@
   padding: 28px;
 }
 
+@media (max-width: 480px) {
+  .contact__form {
+    padding: 22px 18px;
+  }
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -47,6 +53,7 @@
 
 .field input,
 .field textarea {
+  width: 100%;
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--ink);

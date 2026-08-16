@@ -89,6 +89,48 @@ img {
   outline-offset: 3px;
 }
 
+/* Shared button styles — .btn was referenced (Contact's Send button)
+   but never actually defined, so it rendered with no padding/background
+   at all. Sizes for a comfortable ~44px touch target on mobile. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 26px;
+  min-height: 44px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+.btn--primary:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .btn {
+    width: 100%;
+  }
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.72rem;
